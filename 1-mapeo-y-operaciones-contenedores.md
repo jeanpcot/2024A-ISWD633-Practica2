@@ -15,9 +15,10 @@ docker run -P -d --name <nombre contenedor> <nombre imagen>:<tag>
 No puedes mapear puertos a un contenedor existente directamente después de su creación con Docker. El mapeo de puertos debe especificarse en el momento de crear y ejecutar el contenedor.
 
 ### Crear contenedor de Jenkins puertos contenedor: 8080 (interface web) y 50000 (comunicación entre nodos) imagen: jenkins/jenkins:alpine3.18-jdk11
-# COMPLETAR
+![image](https://github.com/jeanpcot/2024A-ISWD633-Practica2/assets/161987855/f5942b96-122d-4fdf-ad31-2cd733a25a94)
 
-# COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:8080
+![image](https://github.com/jeanpcot/2024A-ISWD633-Practica2/assets/161987855/478901c6-ed5d-48b9-b04b-2f8f4a8f4500)
+
 
 ### ¿Cómo obtener la contraseña solicitada?
 Para obtener la contraseña solicitada es necesario ingresar al contenedor.
@@ -32,8 +33,15 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+Listar los directorios y archivos que se encuentran donde estamos
+
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+Los permisos de los archivos
+
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
+![image](https://github.com/jeanpcot/2024A-ISWD633-Practica2/assets/161987855/1e277fa2-2484-4070-a709-5085a2b1f6ef)
+
+
 # COMPLETAR
 # COLOCAR UNA CAPTURA DE PANTALLA
 
@@ -69,7 +77,7 @@ Ejecutar
 ```
 whoami
 ```
-# COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/jeanpcot/2024A-ISWD633-Practica2/assets/161987855/019e8cc0-24a7-4de0-bba1-a111782f85bb)
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -89,11 +97,13 @@ docker exec -it <nombre contenedor> <programa o comando>
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
 
-# COMPLETAR
+![image](https://github.com/jeanpcot/2024A-ISWD633-Practica2/assets/161987855/9c9f7c1c-ac25-48c0-8554-ac084d9e074b)
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
+
+![image](https://github.com/jeanpcot/2024A-ISWD633-Practica2/assets/161987855/2d450a17-2bc2-4098-b724-01ea1181f9e7)
 
 
 ### Para ver los logs de un contenedor
